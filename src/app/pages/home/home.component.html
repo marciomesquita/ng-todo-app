@@ -1,9 +1,6 @@
 <div class="container">
   <div class="list">
-    <ul class="list-item">
-      <li *ngFor="let todo of todos">
-        {{ todo.title }}
-      </li>
-    </ul>
+    <h1>Todos</h1>
+    <mat-card *ngFor="let todo of todos">{{ todo.title }}</mat-card>
   </div>
 </div>
