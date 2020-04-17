@@ -11,11 +11,16 @@ export class HomeComponent implements OnInit {
     { id: 2, title: 'Lotem Ipsum', done: false },
     { id: 3, title: 'Lotem Ipsum', done: false },
     { id: 4, title: 'Lotem Ipsum', done: false },
-    { id: 5, title: 'Lotem Ipsum', done: false }
+    { id: 5, title: 'Lotem Ipsum', done: true }
   ];
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onToggleTodo(todoSelected) {
+    const index = this.todos.findIndex(todo => todo === todoSelected);
+    this.todos[index]['done'] = !todoSelected.done;
   }
 
 }

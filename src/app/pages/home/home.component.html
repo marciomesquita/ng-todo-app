@@ -1,6 +1,11 @@
 <div class="container">
   <div class="list">
     <h1>Todos</h1>
-    <mat-card *ngFor="let todo of todos">{{ todo.title }}</mat-card>
+    <mat-card *ngFor="let todo of todos" class="todo">
+      <mat-checkbox class="todo-done"></mat-checkbox>
+        <span class="todo-label" [ngClass]="{ 'todo-label-done': todo.done }" (click)="onToggleTodo(todo)">
+          &nbsp;{{ todo.title }}&nbsp;
+        </span>
+    </mat-card>
   </div>
 </div>
