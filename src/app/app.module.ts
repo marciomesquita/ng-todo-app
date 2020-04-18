@@ -30,6 +30,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { RouterModule } from '@angular/router';
     MatTableModule,
     MatToolbarModule,
     MatButtonToggleModule,
+    FlexLayoutModule,
     RouterModule.forRoot([
       { path: '**', component: HomeComponent}
     ])

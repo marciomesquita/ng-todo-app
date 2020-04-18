@@ -1,11 +1,29 @@
 <div class="container">
   <div class="list">
     <h1>Todos</h1>
-    <mat-card *ngFor="let todo of todos" class="todo">
-      <mat-checkbox class="todo-done"></mat-checkbox>
-        <span class="todo-label" [ngClass]="{ 'todo-label-done': todo.done }" (click)="onToggleTodo(todo)">
-          &nbsp;{{ todo.title }}&nbsp;
-        </span>
+    <mat-card
+      *ngFor="let todo of todos"
+      class="todo"
+      flexLaout="row wrap"
+      fxLayoutAlign="start center"
+    >
+      <mat-checkbox
+        class="todo-done"
+        [checked]="todo.done"
+        (change)="onToggleTodo(todo)"
+      ></mat-checkbox>
+      <span class="todo-label" [ngClass]="{ 'todo-label-done': todo.done }">
+        &nbsp;{{ todo.title }}&nbsp;
+      </span>
+      <button
+        *ngIf="todo.done"
+        mat-icon-button
+        class="delete-todo"
+        color="primary"
+        aria-label="Example icon button with a home icon"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-card>
   </div>
 </div>
