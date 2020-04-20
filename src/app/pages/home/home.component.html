@@ -1,4 +1,8 @@
 <div class="container">
+<form class="form">
+  <input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
+  <input type="button" value="Submit" class="btn" (click)="onSubmit()">
+</form>
   <div class="list">
     <h1>Todos</h1>
     <mat-card

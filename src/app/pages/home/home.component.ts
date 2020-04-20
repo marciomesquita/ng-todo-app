@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  title: string;
   todos: Array<Object> = [
     { id: 1, title: 'Lotem Ipsum 1', done: false},
     { id: 2, title: 'Lotem Ipsum 2', done: false },
@@ -25,6 +26,15 @@ export class HomeComponent implements OnInit {
 
   deleteTodo(todo) {
     this.todos.splice(this.todos.indexOf(todo), 1);
+  }
+
+  onSubmit() {
+    const newTodo = {
+      title: this.title,
+      done: false
+    }
+    this.todos = [...this.todos, newTodo]
+    this.title = '';
   }
 
 }
