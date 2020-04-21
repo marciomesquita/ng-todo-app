@@ -1,8 +1,16 @@
 <div class="container">
-<form class="form">
-  <input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
-  <input type="button" value="Submit" class="btn" (click)="onSubmit()">
-</form>
+  <div class="add-todo-form">
+    <form class="form">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <mat-form-field appearance="fill" fxFlex="1 2 40rem">
+          <mat-label>Add New Todo</mat-label>
+          <input matInput type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
+        </mat-form-field>
+        <button fxFlex="1 1 20em" mat-raised-button color="primary" value="Submit" class="btn add-todo--btn" (click)="onSubmit()">Add Todo</button>
+      </div>
+    </form>
+  </div>
+
   <div class="list">
     <h1>Todos</h1>
     <mat-card

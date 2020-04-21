@@ -29,6 +29,10 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
+    if (!this.title) {
+      return;
+    }
+
     const newTodo = {
       title: this.title,
       done: false
