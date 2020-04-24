@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title: string;
+  searchText: string;
   todos: Array<Object> = [
     { id: 1, title: 'Lotem Ipsum 1', done: false},
     { id: 2, title: 'Lotem Ipsum 2', done: false },
-    { id: 3, title: 'Lotem Ipsum 3', done: false },
+    { id: 3, title: 'Learn Angular', done: false },
     { id: 4, title: 'Lotem Ipsum 4', done: false },
     { id: 5, title: 'Lotem Ipsum 5', done: true }
   ];
@@ -40,5 +41,4 @@ export class HomeComponent implements OnInit {
     this.todos = [...this.todos, newTodo]
     this.title = '';
   }
-
 }
