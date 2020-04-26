@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -15,7 +21,7 @@ export class HomeComponent implements OnInit {
     { id: 4, title: 'Lotem Ipsum 4', done: false },
     { id: 5, title: 'Lotem Ipsum 5', done: true }
   ];
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +32,8 @@ export class HomeComponent implements OnInit {
   }
 
   deleteTodo(todo) {
-    this.todos.splice(this.todos.indexOf(todo), 1);
+    this.dialog.open(DialogOverviewExampleDialog)
+    // this.todos.splice(this.todos.indexOf(todo), 1);
   }
 
   onSubmit() {
@@ -41,4 +48,18 @@ export class HomeComponent implements OnInit {
     this.todos = [...this.todos, newTodo]
     this.title = '';
   }
+}
+
+@Component({
+  selector: 'delete-item-dialog',
+  templateUrl: '../delete-item-dialog.html' 
+})
+export class DialogOverviewExampleDialog {
+
+  constructor(public dialogRef: MatDialogRef<DialogOverviewExampleDialog>) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
