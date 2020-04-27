@@ -1,10 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { DialogOverviewExampleDialog } from '../../components/delete-item-dialog/delete-item-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -50,16 +46,3 @@ export class HomeComponent implements OnInit {
   }
 }
 
-@Component({
-  selector: 'delete-item-dialog',
-  templateUrl: '../delete-item-dialog.html' 
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(public dialogRef: MatDialogRef<DialogOverviewExampleDialog>) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
