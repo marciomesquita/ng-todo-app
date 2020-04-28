@@ -28,8 +28,13 @@ export class HomeComponent implements OnInit {
   }
 
   deleteTodo(todo) {
-    this.dialog.open(DialogOverviewExampleDialog)
-    // this.todos.splice(this.todos.indexOf(todo), 1);
+    let dialogRef = this.dialog.open(DialogOverviewExampleDialog)
+    dialogRef.componentInstance.confirmDelete.subscribe((confirmed) => {
+      if (confirmed) {
+        this.todos.splice(this.todos.indexOf(todo), 1);
+        dialogRef.close();
+      }
+    });
   }
 
   onSubmit() {
