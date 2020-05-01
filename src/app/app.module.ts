@@ -9,12 +9,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe } from './filter.pipe';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
