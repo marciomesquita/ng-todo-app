@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe } from './filter.pipe';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { DialogOverviewExampleDialog } from './components/delete-item-dialog/delete-item-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     FilterPipe,
     AddTodoComponent
   ],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -12,7 +12,7 @@ export class DialogOverviewExampleDialog {
 
   constructor(public dialogRef: MatDialogRef<DialogOverviewExampleDialog>) { }
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 
