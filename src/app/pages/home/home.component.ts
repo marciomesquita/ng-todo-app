@@ -37,17 +37,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    if (!this.title) {
+  onSubmit(value) {
+    if (!value) {
       return;
     }
 
     const newTodo = {
-      title: this.title,
+      title: value,
       done: false
     }
     this.todos = [...this.todos, newTodo]
-    this.title = '';
   }
 }
 

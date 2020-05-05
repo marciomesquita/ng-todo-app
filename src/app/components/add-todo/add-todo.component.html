@@ -1,1 +1,25 @@
-<p>add-todo works!</p>
+  <div class="add-todo-form">
+    <form class="form">
+      <div fxLayout="column">
+        <mat-form-field appearance="fill">
+          <mat-label>Add New Todo</mat-label>
+          <input
+            matInput
+            type="text"
+            name="title"
+            [(ngModel)]="title"
+            placeholder="Add Todo..."
+          />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          value="Submit"
+          class="btn add-todo--btn"
+          (click)="submit()"
+        >
+          Add Todo
+        </button>
+      </div>
+    </form>
+  </div>
