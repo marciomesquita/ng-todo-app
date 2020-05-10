@@ -11,15 +11,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe } from './filter.pipe';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { DialogOverviewExampleDialog } from './components/delete-item-dialog/delete-item-dialog.component';
+import { FilterTodoComponent } from './components/filter-todo/filter-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FilterPipe,
-    AddTodoComponent
+    AddTodoComponent,
+    DialogOverviewExampleDialog,
+    FilterTodoComponent
   ],
-  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +34,7 @@ import { DialogOverviewExampleDialog } from './components/delete-item-dialog/del
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogOverviewExampleDialog]
 })
 export class AppModule { }
