@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterTodoComponent } from './filter-todo.component';
+import { SearchTodoComponent } from './search-todo.component';
 
-describe('FilterTodoComponent', () => {
-  let component: FilterTodoComponent;
-  let fixture: ComponentFixture<FilterTodoComponent>;
+describe('SearchTodoComponent', () => {
+  let component: SearchTodoComponent;
+  let fixture: ComponentFixture<SearchTodoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterTodoComponent ]
+      declarations: [ SearchTodoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterTodoComponent);
+    fixture = TestBed.createComponent(SearchTodoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

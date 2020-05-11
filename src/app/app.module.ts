@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppMaterialModule } from './app-material/app-material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,7 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe } from './filter.pipe';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { DialogOverviewExampleDialog } from './components/delete-item-dialog/delete-item-dialog.component';
-import { FilterTodoComponent } from './components/filter-todo/filter-todo.component';
+import { SearchTodoComponent } from './components/filter-todo/search-todo.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +20,14 @@ import { FilterTodoComponent } from './components/filter-todo/filter-todo.compon
     FilterPipe,
     AddTodoComponent,
     DialogOverviewExampleDialog,
-    FilterTodoComponent
+    SearchTodoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     AppMaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot([

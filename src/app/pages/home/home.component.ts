@@ -37,6 +37,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  onSearch(value) {
+    this.searchText = value;
+  }
+
   onSubmit(value) {
     if (!value) {
       return;
